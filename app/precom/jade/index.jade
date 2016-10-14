@@ -1,0 +1,51 @@
+doctype
+html(lang=es)
+	head
+		meta(charset="utf-8")
+		title Skeletor
+		meta(name="description",content="Skeletor")
+		meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		link(rel="stylesheet",href="bower_components/fancybox/source/jquery.fancybox.css")
+		link(rel="stylesheet",href="css/style.css")
+	body
+		.link_modal
+			a.fancybox.open_modal(data-href="#openModal") Abrir modal
+		
+		#modal.modal_city
+			.content
+				h3.title
+					| Seleccione
+				.content_group
+					.select_group
+						.group
+							label Departamento :
+							select.select_cat(name="depart")
+								option(value="Seleccion" selected disabled) Selecciona
+						.group
+							label Provincia :
+							select.select_item(name="prov")
+								option(selected disabled) Escoge
+						.group
+							label Distrito :
+							select.select_item(name="dist")
+								option(selected disabled) Escoge
+					.btn
+						.btn_add
+							| Agregar
+						.btn_update
+							| Actualizar
+						.btn_loading
+							| Espere...
+		//- .modal-fixed
+			.modal-wrap
+				.modal-content
+					| texo agregado en pug 
+				span.close
+
+
+		script(src="bower_components/jquery/dist/jquery.min.js")
+		script(src="bower_components/underscore/underscore.js")
+		script(src="bower_components/parsleyjs/dist/parsley.min.js")
+		script(src="bower_components/fancybox/source/jquery.fancybox.js")
+		script(src="js/script.js")
+
